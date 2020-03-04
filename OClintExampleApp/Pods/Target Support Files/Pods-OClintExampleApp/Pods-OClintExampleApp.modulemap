@@ -1,0 +1,6 @@
+framework module Pods_OClintExampleApp {
+  umbrella header "Pods-OClintExampleApp-umbrella.h"
+
+  export *
+  module * { export * }
+}
