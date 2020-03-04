@@ -1,5 +1,8 @@
 os: osx
 language: objective-c
+xcode_workspace: /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace # path to your xcodeproj folder
+xcode_scheme: OClintExampleApp
+xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 osx_image: xcode11.3
 
 script: #!/bin/bash
