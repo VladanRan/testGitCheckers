@@ -1,0 +1,3 @@
+[submodule "share/git/hooks"]
+	path = share/git/hooks
+	url = https://bitbucket.org/Alexander-Shukaev/git-hooks.git
