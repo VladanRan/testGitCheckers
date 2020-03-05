@@ -2,7 +2,7 @@ set -eo pipefail
 
 EXIT_STATUS=0
 
-. ./scripts/check_secrets.sh
+. .OClintExampleApp/scripts/check_secrets.sh
 check_secrets
 
 if [[ "$have_secrets" == true ]]; then
