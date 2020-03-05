@@ -1,5 +1,8 @@
-language: objective-c
-osx_image: xcode10
+language: objective-c  #1
+osx_image: xcode10 #2
+xcode_workspace: OCLintExampleApp.xcworkspace #3
+xcode_scheme: OCLintExampleApp #4
+xcode_sdk: iphonesimulator8.4 #5
 before_install:
 - brew cask install oclint
 - brew tap oclint/formulae
@@ -7,4 +10,4 @@ before_install:
 script:
   - xcodebuild | tee xcodebuild.log
   - oclint-xcodebuild
-  - oclint-json-compilation-database
+  - oclint-json-compilation-database -e Pods -v -- -report-type pmd -o oclint.xml -debug
