@@ -25,7 +25,7 @@ NSString *passMsg =@"Password cant be empty and must contain at least 4 characte
 - (void)viewDidLoad {
     [super viewDidLoad];
     usernamTF.delegate = self;
-    passwordTF.delegate = self;
+             passwordTF.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -34,7 +34,7 @@ NSString *passMsg =@"Password cant be empty and must contain at least 4 characte
     if ([self validateUsername:username andPassword:password]) {
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     MainViewController *mainController =
-        [storyBoard instantiateViewControllerWithIdentifier:@"mainScreen"];
+    [storyBoard instantiateViewControllerWithIdentifier:@"mainScreen"];
     [self presentViewController:mainController animated:YES completion:nil];
     }
 }
