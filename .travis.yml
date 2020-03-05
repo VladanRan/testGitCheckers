@@ -9,5 +9,3 @@ install:
   install: pod update
 script: 
   - xcodebuild -workspace /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClintExampleApp -configuration Debug CODE_SIGN_IDENTITY="iPhone Developer: Vladan Randjelovic(3762P65D2D)" PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
-
-
