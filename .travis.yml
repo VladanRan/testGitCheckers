@@ -5,5 +5,5 @@ xcode_scheme: OClintExampleApp
 xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 osx_image: xcode10
 script: 
-  - xcodebuild -workspace /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClintExampleApp -derivedDataPath /Users/vladan.randjelovic/Library/Developer/Xcode/DerivedData -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 7' -enableCodeCoverage YES clean build test
+  - xcodebuild -workspace https://github.com/VladanRan/testGitCheckers/tree/master/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClintExampleApp -derivedDataPath /Users/vladan.randjelovic/Library/Developer/Xcode/DerivedData -destination 'platform=iOS Simulator,OS=12.0,name=iPhone 7' -enableCodeCoverage YES clean build test
 
