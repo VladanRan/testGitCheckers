@@ -41,6 +41,9 @@ NSString *passMsg =@"Password cant be empty and must contain at least 4 characte
     
 - (IBAction)loginPassword:(id)sender argument:(NSString *)arg {
     password = self.passwordTF.text;
+    if (passwordTF.text != nil) {
+        passwordTF.text = password;
+    }
 }
 
 - (IBAction)loginUsername:(id)sender {
@@ -65,6 +68,18 @@ NSString *passMsg =@"Password cant be empty and must contain at least 4 characte
     [alert setTitle:@"Alert"];
     [alert setMessage:message];
     [alert show];
+}
+
+-(NSString *)getValueDorKey:(NSString *) key
+{
+    NSData *data = [NSData dataWithContentsOfFile:key];
+    if (data != nil) {
+        NSString *value = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        return value;
+    }
+    else {
+        return nil;
+    }
 }
 
 -(BOOL)textFieldShouldReturn:(UITextField *)textField {

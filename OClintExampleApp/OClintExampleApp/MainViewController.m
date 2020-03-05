@@ -23,7 +23,7 @@
     NSString *path;
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDownloadsDirectory, NSUserDomainMask, YES);
     path = [[paths objectAtIndex:0] stringByAppendingPathComponent:dirName];
-    NSError *error;
+    NSError *error;;
     if (![[NSFileManager defaultManager] fileExistsAtPath:path])    //Does directory already exist?
     {
         if (![[NSFileManager defaultManager] createDirectoryAtPath:path
