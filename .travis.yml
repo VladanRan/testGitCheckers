@@ -1,7 +1,7 @@
 language: objective-c
 osx_image: xcode10
 before_install:
-- brew cask uninstall oclint
+- brew cask install oclint
 - brew tap oclint/formulae
 - brew install oclint
 script:
