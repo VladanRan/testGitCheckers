@@ -7,6 +7,6 @@ osx_image: xcode10
 install: 
   brew cask install oclint
 script: 
-  - xcodebuild -workspace /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClint -configuration *buildConfig* CODE_SIGN_IDENTITY="Debug" PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
+  - xcodebuild -project /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcodeproj -scheme OClint -configuration Debug CODE_SIGN_IDENTITY="iPhone Developer: Vladan Randjelovic(3762P65D2D)" PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
 
 
