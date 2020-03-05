@@ -1,12 +1,10 @@
-os: osx
 language: objective-c
-# path to your xcodeproj folder
-xcode_scheme: OClintExampleApp
-xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 osx_image: xcode10
-install: 
-  brew cask install oclint
-script: 
-  - xcodebuild -workspace /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClintExampleApp -configuration *Debug* PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
-
-
+before_install:
+- brew cask uninstall oclint
+- brew tap oclint/formulae
+- brew install oclint
+script:
+  - xcodebuild | tee xcodebuild.log
+  - oclint-xcodebuild
+  - oclint-json-compilation-database
