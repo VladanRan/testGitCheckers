@@ -6,7 +6,8 @@ xcode_destination: platform=iOS Simulator,OS=10.1,name=iPad Pro (9.7-inch)
 osx_image: xcode10
 install: 
   brew cask install oclint
+  install: pod update
 script: 
-  - xcodebuild -project /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcodeproj -scheme OClint -configuration Debug CODE_SIGN_IDENTITY="iPhone Developer: Vladan Randjelovic(3762P65D2D)" PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
+  - xcodebuild -workspace /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/OClintExampleApp.xcworkspace -scheme OClintExampleApp -configuration Debug CODE_SIGN_IDENTITY="iPhone Developer: Vladan Randjelovic(3762P65D2D)" PROVISIONING_PROFILE="Xcode Managed Profile" OTHER_CODE_SIGN_FLAGS="--keychain /Users/vladan.randjelovic/Library/Keychains/login.keychain"
 
 
