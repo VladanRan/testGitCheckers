@@ -1,5 +1,5 @@
 language: objective-c
-osx_image: xcode10
+osx_image: xcode11.4
 podfile: /Users/vladan.randjelovic/Desktop/testGitCheckers/OClintExampleApp/Podfile
 before_install:
 - brew tap oclint/formulae
